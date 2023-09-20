@@ -14,7 +14,8 @@ VITS2 Backbone with bert
 ```python
 pip install -r requirements.txt
 ```
-在终端验证torch版本是否正确：
+
+#### 在终端验证torch版本是否正确：
 ```python
 pip list
 ```
