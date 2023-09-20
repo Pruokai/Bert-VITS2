@@ -30,8 +30,10 @@ pip list
 #### 2.2 进行预处理，去除噪声，背景音乐，分段并打标，在raw文件夹下创建一个新文件夹，自行命名，然后将处理后音频文件放入其中，再将打标生成的.list文件放入filelists文件夹下，修改成对应的名字。
 #### 2.3 clean原始文案，打开preprocess_text.py，将
 ```python
-daefault
+ default="filelists/genshin.list",
 ```
+#### 里的路径进行修改，然后运行。
+#### 2.4 重采样，打开resample.py
 
 ## References
 + [anyvoiceai/MassTTS](https://github.com/anyvoiceai/MassTTS)
