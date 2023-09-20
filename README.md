@@ -10,7 +10,7 @@ VITS2 Backbone with bert
 
 ## 本地部署
 ### 1.安装相应python,cuda,cudnn,pytorch(gpu)和对应的依赖(自行寻找教程）
-#### 1.1 可以使用虚拟环境，在虚拟环境安装torch，将requirements.txt里的依赖进行安装：
+#### 1.1 可以使用虚拟环境，在虚拟环境安装torch，在终端将requirements.txt里的依赖进行安装：
 ```python
 pip install -r requirements.txt
 ```
@@ -20,6 +20,7 @@ pip install -r requirements.txt
 pip list
 ```
 ![屏幕截图 2023-09-20 115825](https://github.com/Pruokai/Bert-VITS2/assets/119948347/246483f7-c01c-486c-8949-7db5f0678b04)
+
 #### 1.2 到[hugging face](https://huggingface.co/)下载对应的bert模型到bert文件里，[中文](https://huggingface.co/hfl/chinese-roberta-wwm-ext-large)，[日文](https://huggingface.co/cl-tohoku/bert-base-japanese-v3/tree/main)，对照一下，把带LFS后缀的或者说缺失的下载下来。
 #### 1.3 
 
