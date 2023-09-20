@@ -8,7 +8,13 @@ VITS2 Backbone with bert
 ### Demo:https://www.bilibili.com/video/BV1TF411k78w
 ### 本地部署指导视频：https://www.bilibili.com/video/BV18N4y1Q7JK
 
+## 本地部署
+### 1.安装相应python,cuda,cudnn,pytorch(gpu)和对应的依赖
+#### 1.1 可以使用虚拟环境，在虚拟环境安装torch以及相关依赖，在终端验证torch版本是否正确：pip list
+![屏幕截图 2023-09-20 115825](https://github.com/Pruokai/Bert-VITS2/assets/119948347/246483f7-c01c-486c-8949-7db5f0678b04)
 
+
+#### 1.2 使用虚拟打开项目后，确保
 
 ## References
 + [anyvoiceai/MassTTS](https://github.com/anyvoiceai/MassTTS)
