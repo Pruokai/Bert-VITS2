@@ -24,11 +24,11 @@ pip list
 
 #### 1.2 到[hugging face](https://huggingface.co/)下载对应的bert模型到bert文件里，[中文](https://huggingface.co/hfl/chinese-roberta-wwm-ext-large)，[日文](https://huggingface.co/cl-tohoku/bert-base-japanese-v3/tree/main)，对照一下，把带LFS后缀的或者说缺失的下载下来。
 #### 1.3 验证模型是否工作正常，打开text文件夹下的chinese_bert.py、japanese.py和japanese_bert.py，将代码中的路径修改为下载的对应的中日文的bert模型目录，运行尝试一下，print出1024日志，说明是正常的。
-#### 1.4 下载[底模](https://openi.pcl.ac.cn/Stardust_minus/Bert-VITS2/modelmanage/model_filelist_tmpl?name=Bert-VITS2%E5%BA%95%E6%A8%A1)，在logs文件夹下新建一个文件夹，放入文件夹。
+#### 1.4 下载[底模](https://openi.pcl.ac.cn/Stardust_minus/Bert-VITS2/modelmanage/model_filelist_tmpl?name=Bert-VITS2%E5%BA%95%E6%A8%A1)，新建logs文件夹，在logs文件夹下新建一个文件夹（自行命名），放入文件夹。
 
 ### 2. 数据集收集与处理
 #### 2.1 数据集收集，获取你想要克隆的人物角色的音频
-#### 2.2 进行预处理，去除噪声，背景音乐，分段并打标，在raw文件夹下创建一个新文件夹，自行命名，然后将处理后音频文件放入其中，再将打标生成的.list文件放入filelists文件夹下，修改成对应的名字。
+#### 2.2 进行预处理，去除噪声，背景音乐，分段并打标，新建raw文件夹，在raw文件夹下创建一个新文件夹，自行命名，然后将处理后音频文件放入其中，再将打标生成的.list文件放入filelists文件夹下，修改成对应的名字。
 #### 2.3 clean原始文案，打开preprocess_text.py，将
 ```python
  default="filelists/genshin.list",
@@ -49,9 +49,16 @@ pip list
 ```
 ### 3.开始训练
 #### 3.1 打开configs文件夹下的config.json文件，根据配置修改epochs与batch_size，
-#### 3.2 开始训练
-
-
+#### 3.2 在终端开始训练
+```python
+py .\train_ms.py -m YourModelName -c configs/config.json
+```
+### 4.推理
+#### 4.1 打开webui.py，修改
+```python
+     "-m", "--model", default="./logs/as/G_8000.pth", help="path of your model"
+```
+#### 为你logs目录下的模型文件，运行。
 
 ## References
 + [anyvoiceai/MassTTS](https://github.com/anyvoiceai/MassTTS)
